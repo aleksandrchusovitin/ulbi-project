@@ -12,6 +12,7 @@ export const buildWebpackConfig = (
 
   return {
     mode,
+    watch: true,
     entry: paths.entry,
     module: {
       rules: buildLoaders(options),
