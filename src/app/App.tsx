@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/Router';
@@ -11,11 +12,13 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <NavBar />
-      <div className='content-page'>
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback='ru'>
+        <NavBar />
+        <div className='content-page'>
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 };

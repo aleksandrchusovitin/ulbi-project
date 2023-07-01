@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink';
+import { AppLink, AppLinkTheme } from 'shared/ui';
+
 import cls from './NavBar.module.scss';
 
 interface INavBarProps {
