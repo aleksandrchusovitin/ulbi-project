@@ -7,6 +7,17 @@ export const buildLoaders = (
 ): Array<webpack.RuleSetRule> => {
   const { isDev } = options;
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+      },
+    },
+  };
+
   // Если не используем TS - нужно дабавить babel-loader
   const typescriptLoader = {
     test: /\.tsx?$/,
@@ -47,5 +58,5 @@ export const buildLoaders = (
     ],
   };
 
-  return [fileLoader, svgLoader, typescriptLoader, cssLoader];
+  return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
 };
