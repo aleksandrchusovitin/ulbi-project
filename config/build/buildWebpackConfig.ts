@@ -6,13 +6,13 @@ import { buildPlugins } from './buildPlugins';
 import { buildDevServer } from './buildDevServer';
 
 export const buildWebpackConfig = (
-  options: IBuildOptions
+  options: IBuildOptions,
 ): webpack.Configuration => {
   const { mode, paths, isDev } = options;
 
   return {
     mode,
-    cache: isDev ? false : true,
+    cache: !isDev,
     entry: paths.entry,
     module: {
       rules: buildLoaders(options),

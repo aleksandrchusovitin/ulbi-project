@@ -2,10 +2,10 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { FC } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ThemeSwitcher.module.scss';
 
 import ThemeIcon from 'shared/assets/icons/theme-icon.svg';
 import { Button, ThemeButton } from 'shared/ui';
+import cls from './ThemeSwitcher.module.scss';
 
 interface IThemeSwitcherProps {
   className?: string;

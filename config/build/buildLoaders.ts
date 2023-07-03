@@ -3,7 +3,7 @@ import webpack from 'webpack';
 import { IBuildOptions } from './types/config';
 
 export const buildLoaders = (
-  options: IBuildOptions
+  options: IBuildOptions,
 ): Array<webpack.RuleSetRule> => {
   const { isDev } = options;
 
