@@ -1,7 +1,7 @@
-@import 'normalize';
-@import 'variables/global';
-@import 'themes/light';
-@import 'themes/dark';
+@import "normalize";
+@import "variables/global";
+@import "themes/light";
+@import "themes/dark";
 
 * {
   margin: 0;
@@ -14,7 +14,6 @@ button,
 textarea,
 select {
   margin: 0;
-
   font: inherit;
 }
 
