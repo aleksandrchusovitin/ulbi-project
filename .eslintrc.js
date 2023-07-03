@@ -2,8 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -31,6 +32,18 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'object-curly-newline': 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'max-len': [
+      'error',
+      120,
+      4,
+      {
+        ignoreComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

@@ -17,6 +17,7 @@ export const NavBar: FC<INavBarProps> = (props) => {
         <AppLink theme={AppLinkTheme.SECONDARY} to="/">
           Главная
         </AppLink>
+
         <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
           О сайте
         </AppLink>

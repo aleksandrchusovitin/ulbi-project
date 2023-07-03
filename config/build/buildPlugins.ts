@@ -5,10 +5,7 @@ import { IBuildOptions } from './types/config';
 
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-export const buildPlugins = ({
-  paths,
-  isDev,
-}: IBuildOptions): Array<webpack.WebpackPluginInstance> => {
+export const buildPlugins = ({ paths, isDev }: IBuildOptions): Array<webpack.WebpackPluginInstance> => {
   const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,

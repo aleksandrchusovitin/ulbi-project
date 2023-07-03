@@ -2,9 +2,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 import { IBuildOptions } from './types/config';
 
-export const buildLoaders = (
-  options: IBuildOptions,
-): Array<webpack.RuleSetRule> => {
+export const buildLoaders = (options: IBuildOptions): Array<webpack.RuleSetRule> => {
   const { isDev } = options;
 
   const babelLoader = {
@@ -34,9 +32,7 @@ export const buildLoaders = (
         options: {
           modules: {
             auto: (resPath: string) => resPath.includes('.module.'),
-            localIdentName: isDev
-              ? '[path][name]__[local]--[hash:base64:5]'
-              : '[hash:base64:8]',
+            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
           },
         },
       },

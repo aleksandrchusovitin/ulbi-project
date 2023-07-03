@@ -1,9 +1,7 @@
 import webpack from 'webpack';
 import { IBuildOptions } from './types/config';
 
-export const buildResolvers = (
-  options: IBuildOptions,
-): webpack.ResolveOptions => {
+export const buildResolvers = (options: IBuildOptions): webpack.ResolveOptions => {
   const { paths } = options;
 
   return {
