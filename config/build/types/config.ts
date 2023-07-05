@@ -12,9 +12,11 @@ export interface IBuildOptions {
   paths: IBuildPaths;
   isDev: boolean;
   port: number;
+  analize: boolean;
 }
 
 export interface IBuildEnv {
   mode: TBuildMode;
   port: number;
+  analize: boolean;
 }

@@ -3,5 +3,6 @@
   "translate": "Translate",
   "language": "Русский",
   "pageNotFound": "Page Not Found",
-  "throwError": "Throw Error"
+  "throwError": "Throw Error",
+  "toggle": "Toggle"
 }

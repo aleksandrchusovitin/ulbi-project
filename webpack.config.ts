@@ -9,6 +9,7 @@ export default (env: IBuildEnv) => {
   const PORT = env.port ?? 3000;
 
   const isDev = mode === 'development';
+  const analize = env.analize ?? false;
 
   const paths: IBuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
@@ -22,6 +23,7 @@ export default (env: IBuildEnv) => {
     paths,
     isDev,
     port: PORT,
+    analize,
   });
   return config;
 };

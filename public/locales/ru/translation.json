@@ -3,5 +3,6 @@
   "translate": "Перевод",
   "language": "English",
   "pageNotFound": "Страница не найдена",
-  "throwError": "Пробросить ошибку"
+  "throwError": "Пробросить ошибку",
+  "toggle": "Переключить"
 }
