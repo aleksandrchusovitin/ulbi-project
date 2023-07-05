@@ -2,5 +2,6 @@
   "test": "Тестовый пример",
   "translate": "Перевод",
   "language": "English",
-  "pageNotFound": "Страница не найдена"
+  "pageNotFound": "Страница не найдена",
+  "throwError": "Пробросить ошибку"
 }

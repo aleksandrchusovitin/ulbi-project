@@ -21,7 +21,7 @@ export const buildPlugins = ({ paths, isDev }: IBuildOptions): Array<webpack.Web
   ];
 
   if (isDev) {
-    plugins.push(new ReactRefreshWebpackPlugin());
+    plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
   }
 
   return plugins;
