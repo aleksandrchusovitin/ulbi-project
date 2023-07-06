@@ -9,5 +9,8 @@ export const buildDevServer = (options: IBuildOptions): DevServerConfiguration =
     open: true,
     historyApiFallback: true,
     hot: true,
+    client: {
+      overlay: false,
+    },
   };
 };
