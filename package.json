@@ -18,7 +18,7 @@
     "analyze:prod": "npm run build:prod --env analyze=true",
     "analyze:dev": "npm run build:dev --env analyze=true",
     "storybook": "storybook dev -p 6006 -c ./config/storybook -s ../../public",
-    "storybook:build": "storybook build -c ./config/storybook -s ../../public"
+    "storybook:build": "storybook build -c ./config/storybook -s ./public"
   },
   "keywords": [],
   "author": "",
