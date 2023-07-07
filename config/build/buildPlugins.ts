@@ -18,11 +18,11 @@ export const buildPlugins = ({ paths, isDev, analize }: IBuildOptions): Array<we
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new BundleAnalyzerPlugin({ openAnalyzer: false, analyzerMode: analize ? 'server' : 'disabled' }),
   ];
 
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin({ overlay: false }));
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false, analyzerMode: analize ? 'server' : 'disabled' }));
   }
 
   return plugins;
