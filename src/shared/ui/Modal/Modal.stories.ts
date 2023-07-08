@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 import { Modal } from './Modal';
 
@@ -19,13 +18,3 @@ export const Primary: Story = {
     isOpen: true,
   },
 };
-
-export const Dark: Story = {
-  args: {
-    children:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-    isOpen: true,
-  },
-};
-
-Dark.decorators = [ThemeDecorator('dark')];
