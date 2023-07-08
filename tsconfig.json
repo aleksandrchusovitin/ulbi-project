@@ -11,6 +11,7 @@
     "paths": {
       "*": ["./src/*"]
     },
+    "strict": true,
     // Позволяет компилятору обрабатывать не только TS но и JS файлы
     "allowJs": true,
     "moduleResolution": "node",

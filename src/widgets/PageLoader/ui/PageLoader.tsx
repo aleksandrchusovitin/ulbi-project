@@ -9,7 +9,7 @@ interface IPageLoaderProps {
 }
 
 export const PageLoader: FC<IPageLoaderProps> = (props) => {
-  const { className } = props;
+  const { className = '' } = props;
 
   return (
     <div className={classNames(cls.pageLoader, {}, [className])}>

@@ -2,6 +2,7 @@
   "test": "Test Example",
   "translate": "Translate",
   "language": "Русский",
+  "languageShort": "Ru",
   "pageNotFound": "Page Not Found",
   "throwError": "Throw Error",
   "toggle": "Toggle"

@@ -9,7 +9,7 @@ interface INotFoundPageProps {
 }
 
 export const NotFoundPage: FC<INotFoundPageProps> = (props) => {
-  const { className } = props;
+  const { className = '' } = props;
 
   const { t } = useTranslation();
 

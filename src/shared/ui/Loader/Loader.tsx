@@ -8,7 +8,7 @@ interface ILoaderProps {
 }
 
 export const Loader: FC<ILoaderProps> = (props) => {
-  const { className } = props;
+  const { className = '' } = props;
 
   return (
     <div className={classNames('lds-ellipsis', {}, [className])}>

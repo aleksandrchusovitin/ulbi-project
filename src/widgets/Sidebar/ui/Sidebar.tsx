@@ -1,9 +1,14 @@
 import { FC, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { AppLink, Button } from 'shared/ui';
+import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+
+import MainIcon from 'shared/assets/icons/home.svg';
+import AboutIcon from 'shared/assets/icons/list.svg';
 import cls from './Sidebar.module.scss';
 
 interface ISidebarProps {
@@ -11,9 +16,9 @@ interface ISidebarProps {
 }
 
 export const Sidebar: FC<ISidebarProps> = (props) => {
-  const { className } = props;
+  const { className = '' } = props;
 
-  const { t } = useTranslation();
+  const { t } = useTranslation('sidebar');
 
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
 
@@ -23,12 +28,37 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
 
   return (
     <div data-testid="sidebar" className={classNames(cls.sidebar, { [cls.collapsed]: isCollapsed }, [className])}>
-      <button data-testid="sidebar-toggle" type="button" onClick={handleToggle}>
-        {t('toggle')}
-      </button>
+      <Button
+        variant="backgroundInverted"
+        className={cls.collapsedBtn}
+        data-testid="sidebar-toggle"
+        type="button"
+        onClick={handleToggle}
+        isSquare
+        size="l"
+      >
+        {isCollapsed ? '>' : '<'}
+      </Button>
+
+      <div className={cls.items}>
+        <div className={cls.item}>
+          <AppLink className={cls.link} variant="secondary" to={RoutePath.main}>
+            <MainIcon className={cls.icon} />
+            <span className={cls.linkText}>{t('main')}</span>
+          </AppLink>
+        </div>
+
+        <div className={cls.item}>
+          <AppLink className={cls.link} variant="secondary" to={RoutePath.about}>
+            <AboutIcon className={cls.icon} />
+            <span className={cls.linkText}>{t('aboutUs')}</span>
+          </AppLink>
+        </div>
+      </div>
+
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        <LangSwitcher className={cls.lang} />
+        <LangSwitcher isShort={isCollapsed} className={cls.lang} />
       </div>
     </div>
   );

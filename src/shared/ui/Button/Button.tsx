@@ -3,22 +3,30 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export enum ThemeButton {
-  CLEAR = 'clear',
-  OUTLINE = 'outline',
-}
+export type ButtonVariant = 'clear' | 'outline' | 'background' | 'backgroundInverted';
+export type ButtonSize = 'm' | 'l' | 'xl';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  theme?: ThemeButton;
+  variant?: ButtonVariant;
+  isSquare?: boolean;
+  size?: ButtonSize;
 }
 
 export const Button: FC<IButtonProps> = (props) => {
-  const { className, children, theme, ...otherProps } = props;
+  const { className = '', children, variant = 'outline', isSquare = false, size = 'l', ...otherProps } = props;
+
+  const mods: Record<string, boolean> = {
+    [cls.square]: isSquare,
+  };
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <button type="button" className={classNames(cls.button, {}, [className, cls[theme]])} {...otherProps}>
+    <button
+      type="button"
+      className={classNames(cls.button, mods, [className, cls[variant], cls[size]])}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...otherProps}
+    >
       {children}
     </button>
   );

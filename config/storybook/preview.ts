@@ -2,7 +2,6 @@ import type { Preview } from '@storybook/react';
 import RouterDecorator from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
 import I18nextDecorator from '../../src/shared/config/storybook/I18nextDecorator/I18nextDecorator';
 import ThemeDecorator from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '../../src/app/providers/ThemeProvider';
 
 import 'app/styles/index.scss';
 
@@ -16,7 +15,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [I18nextDecorator, RouterDecorator, ThemeDecorator(Theme.LIGHT)],
+  decorators: [I18nextDecorator, RouterDecorator, ThemeDecorator('light')],
 };
 
 export default preview;
