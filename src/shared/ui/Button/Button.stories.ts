@@ -18,13 +18,20 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const Clear: Story = {
   args: {
     children: 'Clear',
     variant: 'clear',
   },
 };
-Secondary.decorators = [ThemeDecorator('dark')];
+Clear.decorators = [ThemeDecorator('dark')];
+
+export const ClearInverted: Story = {
+  args: {
+    children: 'ClearInverted',
+    variant: 'clearInverted',
+  },
+};
 
 export const Outline: Story = {
   args: {

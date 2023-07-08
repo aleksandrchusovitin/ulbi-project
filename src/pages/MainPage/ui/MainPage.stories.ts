@@ -12,7 +12,7 @@ const meta: Meta<typeof MainPage> = {
 export default meta;
 type Story = StoryObj<typeof MainPage>;
 
-export const Normral: Story = {
+export const Normal: Story = {
   args: {},
 };
 

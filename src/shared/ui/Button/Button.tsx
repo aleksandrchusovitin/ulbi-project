@@ -3,8 +3,8 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export type ButtonVariant = 'clear' | 'outline' | 'background' | 'backgroundInverted';
-export type ButtonSize = 'm' | 'l' | 'xl';
+type ButtonVariant = 'clear' | 'clearInverted' | 'outline' | 'background' | 'backgroundInverted';
+type ButtonSize = 'm' | 'l' | 'xl';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;

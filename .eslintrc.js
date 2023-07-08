@@ -9,6 +9,7 @@ module.exports = {
     'airbnb',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -19,9 +20,8 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
-    'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
       2,
       {
@@ -61,6 +61,8 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
   },
   globals: {
     __IS_DEV__: true,
