@@ -5,8 +5,6 @@ import { AppRouter } from 'app/providers/Router';
 import { Sidebar } from 'widgets/Sidebar';
 import { Navbar } from 'widgets/Navbar';
 
-import './styles/index.scss';
-
 const App = () => {
   const { theme } = useTheme();
 
@@ -14,6 +12,7 @@ const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="ru">
         <Navbar />
+
         <div className="content-page">
           <Sidebar />
           <AppRouter />

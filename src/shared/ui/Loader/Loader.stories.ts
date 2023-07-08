@@ -12,7 +12,7 @@ const meta: Meta<typeof Loader> = {
 export default meta;
 type Story = StoryObj<typeof Loader>;
 
-export const Normral: Story = {
+export const Normal: Story = {
   args: {},
 };
 
